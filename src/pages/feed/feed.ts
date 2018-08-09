@@ -14,17 +14,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'feed.html',
 })
 export class FeedPage {
-  public nome_usuario:string = "Uma string qualquer";
+  public objeto_feed = {
+    titulo: "Jorge Ribeiro",
+    data: "November 5, 1956",
+    descricao: "Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.",
+    qntd_likes: 12,
+    qntd_comments: 4,
+    time_comment: "11h ago"
+  }
+  public nome_usuario: string = "Uma string qualquer";
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  public somaDoisNumeros(num1:number, num2:number):void {
+  public somaDoisNumeros(num1: number, num2: number): void {
     alert(num1 + num2);
   }
 
   ionViewDidLoad() {
-    
+
   }
 
 }
