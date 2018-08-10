@@ -1,2 +1,3 @@
-# ionic-first-app
-First app developed using Ionic
+# ionic-rest-api-app
+
+App to consume movies from https://www.themoviedb.org/documentation/api.
