@@ -6,49 +6,46 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Feed</ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>Feed</ion-title>
+	</ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-	<ion-card>
+	<ion-card *ngFor="let filme of lista_filmes">
 
-	  <ion-item>
-	    <ion-avatar item-start>
-	      <img src="assets/imgs/marty-avatar.png">
-	    </ion-avatar>
-	    <h2>{{ objeto_feed.titulo }}</h2>
-	    <p>{{ objeto_feed.data }}</p>
-	  </ion-item>
+		<ion-item>
+			<h2>{{ filme.original_title }}</h2>
+			<p>{{ filme.release_date }}</p>
+		</ion-item>
 
-	  <img src="assets/imgs/avatar.png">
+		<img [src]="'https://image.tmdb.org/t/p/w500/' + filme.backdrop_path">
 
-	  <ion-card-content>
-	    <p>{{ objeto_feed.descricao }}</p>
-	  </ion-card-content>
+		<ion-card-content>
+			<p>{{ filme.overview }}</p>
+		</ion-card-content>
 
-	  <ion-row>
-	    <ion-col>
-	      <button ion-button icon-start clear small>
-	        <ion-icon name="thumbs-up"></ion-icon>
-	        <div>{{ objeto_feed.qntd_likes }} Likes</div>
-	      </button>
-	    </ion-col>
-	    <ion-col>
-	      <button ion-button icon-start clear small>
-	        <ion-icon name="text"></ion-icon>
-	        <div>{{ objeto_feed.qntd_comments }} Comments</div>
-	      </button>
-	    </ion-col>
-	    <ion-col center text-center>
-	      <ion-note>
-	        {{ objeto_feed.time_comment }}
-	      </ion-note>
-	    </ion-col>
-	  </ion-row>
+		<ion-row>
+			<ion-col>
+				<button ion-button icon-start clear small>
+					<ion-icon name="thumbs-up"></ion-icon>
+					<div>{{ objeto_feed.qntd_likes }} Likes</div>
+				</button>
+			</ion-col>
+			<ion-col>
+				<button ion-button icon-start clear small>
+					<ion-icon name="text"></ion-icon>
+					<div>{{ objeto_feed.qntd_comments }} Comments</div>
+				</button>
+			</ion-col>
+			<ion-col center text-center>
+				<ion-note>
+					{{ objeto_feed.time_comment }}
+				</ion-note>
+			</ion-col>
+		</ion-row>
 
 	</ion-card>
 </ion-content>
