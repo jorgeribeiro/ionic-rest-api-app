@@ -10,10 +10,10 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class MovieProvider {
   private baseApiPath= "https://api.themoviedb.org/3";
-  private apiKey = "";
+  private apiKey = "b5d85aaefb88a3ba38ee9b04c8e089d1";
 
   constructor(public http: HttpClient) {
-    console.log('Hello MovieProvider Provider');
+    
   }
 
   getLatestMovies() {
