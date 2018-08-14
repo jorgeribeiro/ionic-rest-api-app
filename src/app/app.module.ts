@@ -31,16 +31,15 @@ import { FeedPage } from '../pages/feed/feed';
     FeedPage
   ],
   imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp),
-    // FeedPageModule,
+    BrowserModule,    
     IntroPageModule,
     HttpModule,
     HttpClientModule,
     ConfiguracoesPageModule,
     SobrePageModule,
     PerfilPageModule,
-    FilmeDetalhesPageModule
+    FilmeDetalhesPageModule,
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
