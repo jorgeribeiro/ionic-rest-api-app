@@ -1,5 +1,5 @@
 <!--
-  Generated template for the FeedPage page.
+  Generated template for the FilmeDetalhesPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Feed</ion-title>
+    <ion-title>Detalhes do filme</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -17,8 +17,7 @@
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
-
-  <ion-card *ngFor="let filme of lista_filmes">
+  <ion-card *ngIf="filme">
 
     <ion-item>
       <h2>{{ filme.original_title }}</h2>
@@ -31,15 +30,5 @@
       <p>{{ filme.overview }}</p>
     </ion-card-content>
 
-    <div text-center>
-      <button ion-button (click)="abrirDetalhes(filme)">Detalhes</button>
-    </div>
-    <br>
-
   </ion-card>
-
-  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-    <ion-infinite-scroll-content></ion-infinite-scroll-content>
-  </ion-infinite-scroll>
-  
 </ion-content>
