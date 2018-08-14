@@ -10,7 +10,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class MovieProvider {
   private baseApiPath= "https://api.themoviedb.org/3";
-  private apiKey = "b5d85aaefb88a3ba38ee9b04c8e089d1";
+  private apiKey = "";
 
   constructor(public http: HttpClient) {
     
